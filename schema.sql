@@ -1,0 +1,5 @@
+CREATE TABLE products (id INTEGER PRIMARY KEY, sku TEXT UNIQUE, name TEXT);
+CREATE TABLE cells (id INTEGER PRIMARY KEY, code TEXT, capacity INTEGER);
+CREATE TABLE movements (
+    id INTEGER PRIMARY KEY, product_id INTEGER, cell_id INTEGER,
+    qty INTEGER, kind TEXT, ts DATETIME);
